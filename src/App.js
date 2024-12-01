@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import AddTask from './components/AddTask';
+import ListTask from './components/ListTask';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="min-h-screen bg-gray-50">
+      <header className="bg-blue-500 text-white p-4 text-center text-xl font-bold">
+        Todo Application
       </header>
+      <main className="container mx-auto p-4">
+        <AddTask />
+        <ListTask />
+      </main>
     </div>
   );
-}
+};
 
 export default App;
